@@ -15,9 +15,7 @@ https://www.w3schools.com/js/default.asp
 ***Important Notice:*** This repository contains my weekly work for this course. It is recommended to practice regularly with JavaScript to enhance your coding skills and confidence.
 
 # Example Codes
-//This function will check if current temperature is good for dog walking or not
-//It expects to receive... current temp in integer
-//It will return...False if temperatur if greater than 30 or less than -10  
+
 function checkTemp(currentTemp){
     if(currentTemp>30 || currentTemp< -10){
         return false;
@@ -27,10 +25,6 @@ function checkTemp(currentTemp){
         return true;
     }
 }
-
-
-
-//################## LOGIC THAT OUTPUTS MESSAGES BASED ON FUNCTION RESULTS
 var askTemp=prompt("Current temperature");
 if(checkTemp(askTemp)===true){
 
