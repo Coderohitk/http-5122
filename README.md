@@ -16,21 +16,20 @@ https://www.w3schools.com/js/default.asp
 
 # Example Codes
 
-function checkTemp(currentTemp){
-    if(currentTemp>30 || currentTemp< -10){
+Here is an example of a simple JavaScript function to check the current temperature:
+
+```javascript
+function checkTemp(currentTemp) {
+    if (currentTemp > 30 || currentTemp < -10) {
         return false;
-    }
-    else
-    {
+    } else {
         return true;
     }
 }
-var askTemp=prompt("Current temperature");
-if(checkTemp(askTemp)===true){
 
+var askTemp = prompt("Current temperature");
+if (checkTemp(askTemp) === true) {
     alert("You're good, have a nice walk!");
-    
-}else{
-    alert("Yikes! This is no weather for dog walking!");   
+} else {
+    alert("Yikes! This is no weather for dog walking!");
 }
-
