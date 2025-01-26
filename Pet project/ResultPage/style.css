@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: aquamarine;
+  color: black;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: transparent;
+  transition: background-color 0.5s ease; /* Smooth header background change */
+}
+
+.header h1 {
+    font-size: 28px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Add subtle shadow */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+  }
+
+.header h1:hover {
+  transform: scale(1.05); /* Hover effect */
+}
+
+.nav-buttons .nav-btn {
+  background: white;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  margin-left: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-btn:hover {
+  background-color: #007BFF;
+  color: white;
+  transform: scale(1.1); /* Button hover effect */
+}
+
+/* Anime Suggestion Section */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.anime-suggestion {
+  display: flex;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+  padding: 20px;
+  gap: 20px;
+}
+
+#animeImage {
+  width: auto;
+  height: 350px;
+}
+
+
+.anime-poster {
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.anime-details {
+  flex: 1;
+}
+
+.anime-details h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.choices {
+  color: #007BFF;
+  font-weight: bold;
+}
+
+.anime-title {
+  color: #007BFF;
+  text-decoration: underline;
+}
+
+.imdb-rating {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin: 15px 0;
+}
+
+.imdb-rating span {
+  color: #fbc02d;
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.description {
+  margin-top: 10px;
+  line-height: 1.5;
+  color: #333;
+}
+.user-rating {
+    margin-top: 20px;
+  }
+  
+  .rating-stars {
+    display: flex;
+    gap: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .star {
+    color: #ccc;
+    transition: color 0.3s ease;
+  }
+  
+  .star:hover,
+  .star.active {
+    color: #fbc02d;
+  }
+  
+  .submit-rating {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-rating:hover {
+    background-color: #0056b3;
+  }
+  
+  .rating-feedback {
+    margin-top: 10px;
+    color: green;
+    font-weight: bold;
+  }
+  
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer-link {
+  text-decoration: none;
+  color: black;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #007BFF;
+}
+
+/* Footer Navigation */
+.footer-nav {
+  display: flex;
+}
+
+
+

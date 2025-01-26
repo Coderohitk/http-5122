@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Suggester</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+    <!-- Navigation Header -->
+    <header class="header">
+        <h1>Anime Suggester</h1>
+        <div class="nav-buttons">
+            <button class="nav-btn" aria-label="Signup or Login">Signup/Login</button>
+            <button class="nav-btn" aria-label="Search">&#128269;</button>
+            <button class="nav-btn" aria-label="Settings">&#9881;</button>
+        </div>
+    </header>
+   
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="overlay">
+            <h2>Do you need new suggestions for anime?</h2>
+            <button class="cta-button">CLICK HERE</button>
+        </div>
+    </main>
+    
+    <!-- Modal Structure -->
+    <div id="genreModal" class="modal" style="display: none;">
+        <!-- Question 1 -->
+        <section class="modal-content" id="question1">
+            <h2>What genre of anime do you enjoy the most?</h2>
+            <select id="genreSelect1">
+                <option value="Action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Romance">Romance</option>
+            </select>
+            <button class="next-btn">Next</button>
+        </section>
+
+        <!-- Question 2 -->
+        <section class="modal-content" id="question2" style="display: none;">
+            <h2>Which theme or setting interests you the most?</h2>
+            <select id="genreSelect2">
+                <option value="High School">High School</option>
+                <option value="Fantasy World">Fantasy World</option>
+                <option value="Historical">Historical</option>
+            </select>
+            <button class="next-btn">Next</button>
+        </section>
+
+        <!-- Question 3 -->
+        <section class="modal-content" id="question3" style="display: none;">
+            <h2>What type of main character do you prefer?</h2>
+            <select id="characterType">
+                <option value="Strong and Silent">Strong and Silent</option>
+                <option value="Funny and Clumsy">Funny and Clumsy</option>
+                <option value="Strategic and Smart">Strategic and Smart</option>
+            </select>
+            <button id="submitQuiz">Submit</button>
+        </section>
+    </div>
+    <div id="suggestionSection" style="display: none;">
+        <h3 id="suggestedAnimeName"></h3>
+        <img id="animeImage" src="" alt="Anime Image">
+        <p id="imdbRating"></p>
+        <p id="animeDescription"></p>
+    </div>
+    <div class="container">
+        <div class="sprite"></div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Anime Suggester</p>
+        <nav class="footer-nav">
+            <a href="#" class="footer-link">Terms</a>
+            <a href="#" class="footer-link">Privacy</a>
+        </nav>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

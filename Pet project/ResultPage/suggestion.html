@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Suggester</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 id="home">Anime Suggester</h1>
+    <div class="nav-buttons">
+      <button class="nav-btn" aria-label="Signup or Login">Signup/Login</button>
+      <button class="nav-btn" aria-label="Search">&#128269;</button>
+      <button class="nav-btn" aria-label="Settings">&#9881;</button>
+    </div>
+  </header>
+  <main>
+    <div class="anime-suggestion" id="animeSuggestion">
+      <img id="animeImage"  alt="Anime Poster">
+      <div class="anime-details">
+        <h2>
+          Based on the choices: <span class="choices" id="choices"></span>, 
+          your Anime Suggestion is <strong><span class="anime-title" id="animeTitle"></span></strong>
+        </h2>
+        <div class="imdb-rating">
+          <span>⭐</span> IMDB Rating: <span class="rating" id="rating"></span>
+        </div>
+        <p><strong>Description:</strong></p>
+        <p class="description" id="description"></p>
+
+        <!-- User Rating Section -->
+        <div class="user-rating">
+          <p><strong>Your Rating:</strong></p>
+          <div class="rating-stars">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+          </div>
+          <button class="submit-rating">Submit Rating</button>
+          <p class="rating-feedback"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <p>&copy; 2024 Anime Suggester</p>
+    <nav class="footer-nav">
+      <a href="#" class="footer-link">Terms</a>
+      <a href="#" class="footer-link">Privacy</a>
+    </nav>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

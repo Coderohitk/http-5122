@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* Reset some default styles */
+body, h1, h2, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-image: url('BackgroundImage.png');/* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    animation: fadeInBackground 2s ease-in-out; /* Fade-in animation */
+  }
+  .container{
+    height: 135px;
+    position: relative;
+    overflow: hidden;
+}
+.sprite {
+    width: 124px;                /* Width of one frame (55px) */
+    height: 279px;               /* Height of one frame (85px) */
+    background-image: url('GokU-removebg-preview.png'); /* Path to your sprite sheet */
+    background-repeat: no-repeat;
+    position: relative;
+    
+    animation: spriteAnimation 2s steps(5) infinite; /* 11 frames, looping every 1s */
+}
+
+/* Keyframes to shift the background-position for each frame */
+@keyframes spriteAnimation {
+from {
+    background-position: 0;
+}
+to{
+    background-position: -660px;
+}
+}
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: transparent;
+    transition: background-color 0.5s ease; /* Smooth header background change */
+  }
+  
+  .header h1 {
+    font-size: 28px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Add subtle shadow */
+    transition: transform 0.3s ease; /* Smooth scaling effect */
+  }
+  
+  .header h1:hover {
+    transform: scale(1.05); /* Hover effect */
+  }
+  
+  .nav-buttons .nav-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .nav-btn:hover {
+    background-color: #007BFF;
+    color: white;
+    transform: scale(1.1); /* Button hover effect */
+  }
+  
+  /* Main Content Styles */
+  .main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding-top: 80px; /* Adjust for fixed header */
+  }
+  
+  .overlay {
+    background: rgba(255, 255, 255, 0.9); /* White with opacity */
+    padding: 50px;
+    border-radius: 15px;
+    color: black;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1.5s ease; /* Fade-in animation */
+    width:65%;
+    
+  }
+  
+  .overlay h2 {
+    margin-bottom: 20px;
+    font-size: 4rem;
+    text-shadow: 0px 4px 4px #00000040;
+  }
+  
+  .cta-button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+  }
+  /* Button click animation */
+.button-clicked {
+  transform: scale(0.95);
+  transition: transform 0.1s ease;
+}
+
+  
+  /* Footer Styles */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    box-shadow: 0 -4px 10px rgba;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: black;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #007BFF;
+  }
+  
+  /* Footer Navigation */
+  .footer-nav {
+    display: flex;
+  }
+  /* Modal styles */
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 400px;
+    width: 80%;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: black;
+  }
+  
+  select {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+    
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInBackground {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .header h1 {
+      font-size: 22px;
+    }
+    
+    .nav-buttons .nav-btn {
+      padding: 8px 12px;
+    }
+  
+    .overlay {
+      padding: 30px;
+    }
+  
+    .overlay h2 {
+      font-size: 24px;
+    }
+  
+    .cta-button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+  
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-link {
+      margin-left: 0;
+      margin-top: 5px;
+    }
+  }
+  
